@@ -109,4 +109,4 @@ for (let i = 0; i < finances.length; i++ ) {
   // used netProfits to store the sum result of 86 month netProfits, then every time when for loops executes it stores the data, and with the data makes the operation again
   // and by using finances[i][1] targets the number from array
 }
- console.log( netProfits);
+ console.log("Total net profits: $" + netProfits);
