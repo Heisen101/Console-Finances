@@ -100,7 +100,11 @@ pseudocode:
 // var finances
 
 // const allMonths = finance.length;
-var totalMonth = finances.length;    //  Total number of month
+var totalMonth = 0;
+for (const subarray of finances) {
+  totalMonth++;
+  // used subarray mothod to acces subarray without index need
+}
 console.log ("Total Months: " + totalMonth);
 
 var netProfits = 0;
@@ -109,12 +113,13 @@ for (let i = 0; i < finances.length; i++ ) {
   // used netProfits to store the sum result of 86 month netProfits, every time when for loops executes it stores the data, and with the data makes the operation again
   // and by using finances[i][1] targets the subbary from array, javascript is 0 index start
 }
+console.log("Total profits for the period: $" + netProfits);
 
-var totaLosses = 0
- console.log("Total net profits: $" + netProfits);
- for ( let i = 0; i < finances.length; i++) {
-  if ( finances[i][1] < 0 ){
-    totaLosses += finances[i][1];
-  }
- }
- console.log(totaLosses);
+// var totaLosses = 0
+//  console.log("Total net profits: $" + netProfits);
+//  for ( let i = 0; i < finances.length; i++) {
+//   if ( finances[i][1] < 0 ){
+//     totaLosses += finances[i][1];
+//   }
+//  }
+//  console.log("total losses for $" + totaLosses);
