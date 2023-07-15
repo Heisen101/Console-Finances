@@ -124,18 +124,26 @@ var totalnetChange = 0;
 var greatestProfitIncreaseDate = finances[0][0];
 var greatestProfitDecreaseDate =  finances [0][0];
 var greatestProfitIncrease = 0;
-var greatestDecrease = 0;
+var greatestDecreaseProfit = 0;
 
 
 for ( let i = 1; i < finances.length; i++){
-  var MonthProfit = finances[i][1];   //  we target the second index in Array, because we have to use first month as base month to calculate the  change
-  var previousMonthValue = finances[i-1][1];
+  var MonthProfit = finances[i][1];   //  we target the second index in Array, because we have to use first month as base month to calculate the  change and  (i) will add everytime when iteraration goes again
+  var previousMonthValue = finances[i-1][1]; 
   var changeProfit = MonthProfit - previousMonthValue;
-  totalnetChange +=changeProfit;
-  
+  totalnetChange +=changeProfit; 
+  // totalnetCahnge will store total average net profit from moth to moth for us to be able to use in main formula
+  if (changeProfit > greatestProfitIncrease) {
+    greatestProfitIncreaseDate = finances[i][0];
+    greatestProfitIncrease = changeProfit
+  } else if (changeProfit < greatestDecrease) {
+    greatestProfitDecreaseDate = finances[i][0];
+    greatestDecreaseProfit = changeProfit;
+  }
 }
 var netChange = totalnetChange / (finances.length - 1);
-console.log( "Average change: $" + netChange.toFixed(2));
+console.log( "Average change monthly: $" + netChange.toFixed(2));
+console.log ("Data with greatest increase in profit: "+ greatestProfitIncreaseDate + ":" + " " + greatestProfitIncrease);
 
 
 
