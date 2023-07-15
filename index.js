@@ -88,16 +88,6 @@ var finances = [
 ];
 
 
-pseudocode:
-// 1. calculate the total number of months included in datased, find and display in console.How it can be achivied?
-// we can use the i++ to add and find the total number of months
-// 2. Total profit fot the entire period? How can be achivied?
-//   Total Revenue - Total Expenses = Profit. 2.1 we have to calculate losses, then revenue and then net profit.
-// 3.the average change from month  to month, for entire period andafter find the average change for month for entire period.
-// 4.the greatest increase in profit for entire period, 
-// the greatest decriase in profits for entire period.
-
-// var finances
 
 console.log ("Financial Analysis");
 console.log("_ _ _ _ _ _ _ _ _");
@@ -141,6 +131,7 @@ for ( let i = 1; i < finances.length; i++){
     greatestDecreaseProfit = changeProfit   // variable will take the amount from change promit 
   }
 }
+
 var netChange = totalnetChange / (finances.length - 1);  //  netChange calculated based on main formula Total/(number of month-1)
 console.log( "Average change monthly: $" + netChange.toFixed(2));
 console.log ("Data with greatest increase in profit: " + greatestProfitIncreaseDate + ":" + " " + greatestProfitIncrease);
