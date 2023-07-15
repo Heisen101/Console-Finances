@@ -122,20 +122,20 @@ console.log("Total profits for the period: $" + netProfits);
 var totalnetChange = 0;
 
 var greatestProfitIncreaseDate = finances[0][0];
-var greatestProfitDecreaseDate=  finances [0][0];
-var greatestProfitIncrease= 0;
+var greatestProfitDecreaseDate =  finances [0][0];
+var greatestProfitIncrease = 0;
 var greatestDecrease = 0;
 
 
 for ( let i = 1; i < finances.length; i++){
   var MonthProfit = finances[i][1];   //  we target the second index in Array, because we have to use first month as base month to calculate the  change
-  var previousMonthValue = finances[finances.length-1][1];
+  var previousMonthValue = finances[i-1][1];
   var changeProfit = MonthProfit - previousMonthValue;
   totalnetChange +=changeProfit;
-  if ()
+  
 }
 var netChange = totalnetChange / (finances.length - 1);
-console.log( totalnetChange);
+console.log( "Average change: $" + netChange.toFixed(2));
 
 
 
