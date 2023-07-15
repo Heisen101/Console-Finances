@@ -136,14 +136,14 @@ for ( let i = 1; i < finances.length; i++){
   if (changeProfit > greatestProfitIncrease) {
     greatestProfitIncreaseDate = finances[i][0];  // variable will take the month and profit from finances array
     greatestProfitIncrease = changeProfit    // variable will take the amount from change promit 
-  } else if (changeProfit < greatestDecrease) {
+  } else if (changeProfit < greatestDecreaseProfit) {
     greatestProfitDecreaseDate = finances[i][0];// variable will take the month and profit from finances array
-    greatestDecreaseProfit = changeProfit;   // variable will take the amount from change promit 
+    greatestDecreaseProfit = changeProfit   // variable will take the amount from change promit 
   }
 }
 var netChange = totalnetChange / (finances.length - 1);  //  netChange calculated based on main formula Total/(number of month-1)
 console.log( "Average change monthly: $" + netChange.toFixed(2));
-console.log ("Data with greatest increase in profit: "+ greatestProfitIncreaseDate + ":" + " " + greatestProfitIncrease);
+console.log ("Data with greatest increase in profit: " + greatestProfitIncreaseDate + ":" + " " + greatestProfitIncrease);
 console.log (" Data with greatest decrease in profit: " + greatestProfitDecreaseDate + ":" + " " + greatestDecreaseProfit);
 
 
@@ -152,11 +152,3 @@ console.log (" Data with greatest decrease in profit: " + greatestProfitDecrease
 
 
 
-// var totaLosses = 0
-//  console.log("Total net profits: $" + netProfits);
-//  for ( let i = 0; i < finances.length; i++) {
-//   if ( finances[i][1] < 0 ){
-//     totaLosses += finances[i][1];
-//   }
-//  }
-//  console.log("total losses for $" + totaLosses);
