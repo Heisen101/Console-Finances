@@ -99,7 +99,9 @@ pseudocode:
 
 // var finances
 
-// const allMonths = finance.length;
+console.log ("Financial Analysis");
+console.log("_ _ _ _ _ _ _ _ _");
+
 var totalMonth = 0;
 for (const subarray of finances) {
   totalMonth++;
@@ -110,10 +112,37 @@ console.log ("Total Months: " + totalMonth);
 var netProfits = 0;
 for (let i = 0; i < finances.length; i++ ) {
   netProfits += finances[i][1]; 
-  // used netProfits to store the sum result of 86 month netProfits, every time when for loops executes it stores the data, and with the data makes the operation again
-  // and by using finances[i][1] targets the subbary from array, javascript is 0 index start
+  // used netProfits to store the sum result of 86 month netProfits, every time when for loops executes it stores the data in variable, and with this data makes the operation again
+  // and by using finances[i][1] targets the subbary from array, javascript is 0 index lang.
 }
 console.log("Total profits for the period: $" + netProfits);
+
+// so we need to find the net change in profits from month to month, to do that we need to start with first month as base and to move up to Array,
+
+var totalnetChange = 0;
+
+var greatestProfitIncreaseDate = finances[0][0];
+var greatestProfitDecreaseDate=  finances [0][0];
+var greatestProfitIncrease= 0;
+var greatestDecrease = 0;
+
+
+for ( let i = 1; i < finances.length; i++){
+  var MonthProfit = finances[i][1];   //  we target the second index in Array, because we have to use first month as base month to calculate the  change
+  var previousMonthValue = finances[finances.length-1][1];
+  var changeProfit = MonthProfit - previousMonthValue;
+  totalnetChange +=changeProfit;
+  if ()
+}
+var netChange = totalnetChange / (finances.length - 1);
+console.log( totalnetChange);
+
+
+
+
+
+
+
 
 // var totaLosses = 0
 //  console.log("Total net profits: $" + netProfits);
