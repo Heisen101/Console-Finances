@@ -106,7 +106,15 @@ console.log ("Total Months: " + totalMonth);
 var netProfits = 0;
 for (let i = 0; i < finances.length; i++ ) {
   netProfits += finances[i][1]; 
-  // used netProfits to store the sum result of 86 month netProfits, then every time when for loops executes it stores the data, and with the data makes the operation again
-  // and by using finances[i][1] targets the number from array
+  // used netProfits to store the sum result of 86 month netProfits, every time when for loops executes it stores the data, and with the data makes the operation again
+  // and by using finances[i][1] targets the subbary from array, javascript is 0 index start
 }
+
+var totaLosses = 0
  console.log("Total net profits: $" + netProfits);
+ for ( let i = 0; i < finances.length; i++) {
+  if ( finances[i][1] < 0 ){
+    totaLosses += finances[i][1];
+  }
+ }
+ console.log(totaLosses);
