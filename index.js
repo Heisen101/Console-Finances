@@ -144,7 +144,7 @@ for ( let i = 1; i < finances.length; i++){
 var netChange = totalnetChange / (finances.length - 1);
 console.log( "Average change monthly: $" + netChange.toFixed(2));
 console.log ("Data with greatest increase in profit: "+ greatestProfitIncreaseDate + ":" + " " + greatestProfitIncrease);
-
+console.log (" Data with greatest decrease in profit: " + greatestProfitDecreaseDate + ":" + " " + greatestDecreaseProfit);
 
 
 
