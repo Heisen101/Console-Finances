@@ -17,7 +17,7 @@ The project performs the following tasks:
 
 To run the project, execute the JavaScript code provided in your preferred JavaScript environment or browser console. The code will output the calculated results in the console.
 
-
+![Alt text](<Screenshot 2023-07-18 100819.png>)
 
 
 Ensure that you have the `finances` array defined with the correct financial data before running the code.
@@ -34,3 +34,8 @@ Upon running the code, the project will output the following information in the 
 
 Please make sure the `finances` array is correctly populated with the financial data you wish to analyze.
     
+
+
+## License
+
+This project is licensed under the MIT License.
