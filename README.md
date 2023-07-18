@@ -14,7 +14,7 @@ The project performs the following tasks:
 5. Identifies the month with the greatest decrease in profit and the corresponding profit amount.
 
 ## Usage
-
+To view the website, [Console-Finance also](https://heisen101.github.io/Console-Finances/) link for github repository [click](https://github.com/Heisen101/Console-Finances/blob/main/index.js)
 To run the project, execute the JavaScript code provided in your preferred JavaScript environment or browser console. The code will output the calculated results in the console.
 
 ![Alt text](<Screenshot 2023-07-18 100819.png>)
